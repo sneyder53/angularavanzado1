@@ -1,0 +1,22 @@
+  <div class="row">
+    <div class="col-lg-4">
+      <h3>{{ title }}</h3>
+      <div class="sideber-admin" data-example-id="sample-nav-stacked">
+        <ul class="nav nav-pills list-group">
+          <li class="nav-item" >
+            <a class="nav-link" [routerLink]="['listado']" [routerLinkActive]="['active']">listado</a>
+          </li>
+          <li  class="nav-item">
+            <a class="nav-link"  [routerLink]="['crear']" [routerLinkActive]="['active']">Crear</a>
+          </li>
+          <li  class="nav-item">
+            <a class="nav-link"  [routerLink]="['editar']" [routerLinkActive]="['active']">Informacion</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+

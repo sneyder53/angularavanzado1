@@ -1,0 +1,79 @@
+<div class="col-lg-12" [@fadeIn]>
+<a class="boton_activo btn btn-success" [@marcar]="status" (click)="cambiarEstado(status)">
+  <span *ngIf="status == 'inactive'">Boton inactivo</span>
+  <span *ngIf="status == 'active'">Boton activado</span>
+</a>
+<hr>
+<h4>Animaciones CSS3</h4>
+<a class="boton_transiciones">Transiciones</a>
+<div class="clearfix"></div>
+
+<div class="caja_animada">
+
+</div>
+<hr>
+<h4>Utilizar jquery dentro de angular</h4>
+
+<button id="botonjq">Mostrar Texto</button>
+<p id="textojq" class="hidden alert alert-warning">
+  Disfruta de los animales mas exoticos de nuestro zoologico
+</p>
+
+<div id="caja" style="border: 1px solid black; width: 150px; height: 50px;">
+  this is a simpler hero unit, a simple jumbotron-style component for calling extra
+  attention to featured content or information.
+</div>
+<hr>
+<div>
+  <h1>TinyMCE 5 Angular Demo</h1>
+  <editor
+    [init]="{
+      height: 500,
+      menubar: false,
+      plugins: [
+        'advlist autolink lists link image charmap print preview anchor',
+        'searchreplace visualblocks code fullscreen',
+        'insertdatetime media table paste code help wordcount'
+      ],
+      toolbar:
+        'undo redo | formatselect | bold italic backcolor | \
+        alignleft aligncenter alignright alignjustify | \
+        bullist numlist outdent indent | removeformat | help'
+    }"
+  ></editor>
+</div>
+<hr>
+Padre:
+<h1>tienda works! {{titulo}}</h1>
+<ul>
+  <li>Camiseta rosa</li>
+  <li>Gorra negra</li>
+</ul>
+<hr>
+<p>
+nombre del Parque:
+<input type="text" [(ngModel)]="mombredelParque" (keyup)="mostrarNombre()"/>
+</p>
+<p>
+  Resultado : {{mombredelParque}}
+</p>
+<div *ngIf="miParque">
+  <h4>Datos de mi parque desde el hijo</h4>
+  <ol >
+    <li>{{miParque.nombre}}</li>
+    <li>{{miParque.metros}}</li>
+    <li>{{miParque.vegetacion}}</li>
+    <li>{{miParque.abierto}}</li>
+  </ol>
+</div>
+
+<hr>
+<p *ngIf="mombredelParque">
+hijo :
+  <parques
+    [nombre] = "mombredelParque"
+    [metros_cuadrados]="467"
+    (pasameLosDatos)="verDatosParque($event)">
+  </parques>
+</p>
+</div>

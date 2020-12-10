@@ -1,0 +1,14 @@
+<div class="col-lg-12" [@fadeIn]>
+  <h1>{{title}}</h1>
+  <div class="col-lg-12 keeper-image-mask">
+    <div class="card float-left" style="width: 18rem;" *ngFor="let keeper of keepers">
+      <img class="card-img-top" src="{{ url +'get-imege-file/' + keeper.image }}" alt="{{keeper.name}}" *ngIf="keeper.image">
+      <img class="card-img-top" src="https://via.placeholder.com/400" alt="{{keeper.name}}" *ngIf="!keeper.image">
+      <div class="card-body">
+        <h3 class="card-title">{{keeper.name}} {{keeper.surname}}</h3>
+        <p class="card-text">{{keeper.email}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+

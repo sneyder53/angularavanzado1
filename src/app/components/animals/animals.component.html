@@ -1,0 +1,15 @@
+<div class="col-lg-12" [@fadeIn]>
+  <h1> {{title}} </h1>
+  <div class="col-lg-12 animal-image-mask">
+    <div class="card float-left" style="width: 18rem;" *ngFor="let animal of animals">
+      <img class="card-img-top" src="{{ url +'get-image-animal/' + animal.image }}" alt="{{animal.name}}" *ngIf="animal.image">
+      <img class="card-img-top" src="https://via.placeholder.com/400" alt="{{animal.name}}" *ngIf="!animal.image">
+      <div class="card-body">
+        <h3 class="card-title"><a [routerLink]="['/animal',animal._id]">{{animal.name}}</a></h3>
+        <p class="card-text">{{animal.year}}</p>
+        <p class="card-text">{{animal.description}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+

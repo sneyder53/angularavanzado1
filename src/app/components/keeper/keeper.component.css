@@ -1,0 +1,13 @@
+.keeper-image-mask{
+  width: 100%;
+  overflow: hidden;
+  margin: 2%;
+}
+.animal-image-mask img{
+  max-height: 400px;
+}
+
+h3 a{
+  color: black;
+  text-decoration: none;
+}
